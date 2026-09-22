@@ -247,3 +247,39 @@ input:focus {
     line-height: 1.6;
     color: #ddd;
   }
+/* =========================
+   КАРТА АРХИВА v0.2
+   ========================= */
+
+.map-box {
+    width: min(95%, 800px);
+    margin: 25px auto;
+    padding: 20px;
+    border: 1px solid #49436e;
+    border-radius: 18px;
+    background: rgba(15, 14, 30, 0.85);
+    box-shadow: 0 0 30px rgba(72, 62, 180, 0.2);
+    text-align: center;
+}
+
+.map-box h3 {
+    color: #aaa0ff;
+    margin-top: 0;
+}
+
+#currentLocation {
+    margin: 15px 0;
+    color: #ddd;
+    font-weight: bold;
+}
+
+#locations {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    justify-content: center;
+}
+
+#locations button {
+    flex: 1 1 180px;
+}
