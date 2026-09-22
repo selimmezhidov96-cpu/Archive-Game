@@ -256,3 +256,35 @@ const worldMap = {
 let currentLocation = "center";
 
 console.log("Карта мира загружена.");
+
+/* =========================
+   УПРАВЛЕНИЕ КАРТОЙ v0.2
+   ========================= */
+
+function updateMap() {
+    const location = worldMap[currentLocation];
+
+    document.getElementById("currentLocation").textContent =
+        "📍 " + location.name;
+
+    const locationsBox = document.getElementById("locations");
+    locationsBox.innerHTML = "";
+
+    location.connections.forEach(id => {
+        const target = worldMap[id];
+
+        const button = document.createElement("button");
+
+        button.textContent = "➡️ " + target.name;
+
+        button.onclick = () => {
+            currentLocation = id;
+            updateMap();
+
+            document.getElementById("worldText").textContent =
+                target.description;
+        };
+
+        locationsBox.appendChild(button);
+    });
+}
