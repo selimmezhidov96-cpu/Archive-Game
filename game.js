@@ -223,3 +223,36 @@ function checkForSecretSong() {
 
 console.log("АРХИВ запущен.");
 console.log("Система готова.");
+/* =========================
+   КАРТА МИРА v0.2
+   ========================= */
+
+const worldMap = {
+    center: {
+        name: "🏛️ Центральная зона",
+        description: "Главное место Архива. Отсюда начинаются путешествия.",
+        connections: ["forest", "library", "abandoned"]
+    },
+
+    forest: {
+        name: "🌲 Лес",
+        description: "Большая территория, где можно найти следы, предметы и необычные события.",
+        connections: ["center"]
+    },
+
+    library: {
+        name: "📚 Библиотека",
+        description: "Старая библиотека Архива. Среди книг могут скрываться тайны.",
+        connections: ["center"]
+    },
+
+    abandoned: {
+        name: "🏚️ Заброшенное здание",
+        description: "Старое здание, о котором Архив почему-то ничего не рассказывает.",
+        connections: ["center"]
+    }
+};
+
+let currentLocation = "center";
+
+console.log("Карта мира загружена.");
