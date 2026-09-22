@@ -53,6 +53,7 @@ function startFreeMode() {
     }
 
     showScreen("freeMode");
+    updateMap();
 }
 
 function exploreWorld() {
